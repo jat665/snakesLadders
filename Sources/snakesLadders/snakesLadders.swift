@@ -7,6 +7,10 @@ public struct SnakesLadders {
 
 class Token {
   var position = Board.initialPosition
+  
+  func move(spaces: Int) {
+    position += spaces
+  }
 }
 
 class Board {
