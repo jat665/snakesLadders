@@ -1,11 +1,12 @@
 import XCTest
 @testable import snakesLadders
 
-final class snakesLaddersTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(snakesLadders().text, "Hello, World!")
-    }
+// US 1
+final class tokenCanMoveAcrossTheBoardTests: XCTestCase {
+  
+  // UAT1
+  func testGameIsStarted() throws {
+    let game = SnakesLadders()
+    XCTAssertEqual(game.token1.position, 1, "Token should be on square 1")
+  }
 }
