@@ -1,13 +1,14 @@
 @main
 public struct SnakesLadders {
   let token1 = Token()
-
+  let dice = Die()
+  
   public static func main() {}
 }
 
 class Token {
   var position = Board.initialPosition
-  
+    
   @discardableResult
   func move(spaces: Int) -> Bool {
     if ((position + spaces) > Board.finalPosition) {
@@ -19,6 +20,15 @@ class Token {
 
   func move(toPosition position: Int) {
     self.position = position
+  }
+}
+
+class Die {
+  private static let start = 1
+  private static let end = 6
+  
+  func roll() -> Int {
+    return Int.random(in: Die.start...Die.end)
   }
 }
 
