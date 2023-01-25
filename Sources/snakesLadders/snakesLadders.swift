@@ -8,11 +8,18 @@ public struct SnakesLadders {
 class Token {
   var position = Board.initialPosition
   
-  func move(spaces: Int) {
+  @discardableResult
+  func move(spaces: Int) -> Bool {
     position += spaces
+    return position == Board.finalPosition
+  }
+
+  func move(toPosition position: Int) {
+    self.position = position
   }
 }
 
 class Board {
   static let initialPosition = 1
+  static let finalPosition = 100
 }
