@@ -20,4 +20,14 @@ final class PlayerCanWinTheGame: XCTestCase {
     XCTAssertEqual(game.token1.position, 100, "Token should be on square 100")
     XCTAssertTrue(isWinner, "Player1 should won the game")
   }
+  
+  // UAT2
+  func testPlayerHasNotWonTheGame() throws {
+    let game = SnakesLadders()
+    game.token1.move(toPosition: 97)
+    XCTAssertEqual(game.token1.position, 97, "Token should be on square 97")
+    let isWinner = game.token1.move(spaces: 4)
+    XCTAssertEqual(game.token1.position, 97, "Token should be on square 97")
+    XCTAssertFalse(isWinner, "Player1 should not won the game")
+  }
 }

@@ -10,6 +10,9 @@ class Token {
   
   @discardableResult
   func move(spaces: Int) -> Bool {
+    if ((position + spaces) > Board.finalPosition) {
+      return false
+    }
     position += spaces
     return position == Board.finalPosition
   }
