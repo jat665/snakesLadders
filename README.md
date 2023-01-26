@@ -6,7 +6,7 @@ use `git clone https://github.com/jat665/snakesLadders.git` to clone swift proje
 
 ## Usage
 
-go to the base project path
+go to the base project path `cd snakesLadders`
 
 use `open Package.swift` to open project using xcode IDE
 
