@@ -13,3 +13,5 @@ use `open Package.swift` to open project using xcode IDE
 use `swift test` to run all swift test
 
 use `swift build` to built project
+
+use `swift run` to run project
